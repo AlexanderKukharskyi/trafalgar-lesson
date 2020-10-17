@@ -1,0 +1,56 @@
+.nav {
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
+.nav-btn {
+  border: none;
+  padding: 0;
+  width: 25px;
+  height: 25px;
+  background: url(../img/menu.svg);
+  visibility: hidden;
+  // display: none;
+}
+
+.nav-btn {
+  @media screen and (max-width: 768px) {
+    visibility: visible;
+    // display: block;
+  }
+}
+
+// /Burger menu/
+.sub-menu {
+  display: none;
+}
+.nav-btn:focus ~ .sub-menu,
+.nav-btn:active ~ .sub-menu,
+.sub-menu:hover {
+  display: block;
+}
+// /Burger menu/
+
+.nav__list {
+  display: flex;
+
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 40px;
+}
+
+.nav__link {
+  font-size: 18px;
+  line-height: 1.27;
+  color: rgba(31, 21, 52, 0.5);
+  text-decoration: none;
+}
+
+.nav__link--active {
+  color: #1f1534;
+}
